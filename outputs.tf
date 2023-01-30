@@ -1,0 +1,16 @@
+output "instances_id" {
+  description = "ids das instancias criadas"
+  value       = [module.ec2_multiple["one"].id, module.ec2_multiple["two"].id]
+}
+
+output "public_ips" {
+  description = "public ips das instancias criadas"
+  value       = [module.ec2_multiple["one"].public_ip, module.ec2_multiple["two"].public_ip]
+}
+
+output "commands_ssh_per_instance" {
+  description = "Lista com comando para acessar um diretorio anterior ao do codigo e executar a conexao ssh com a instancia criada"
+  value = [join(" ", ["ssh -i", "../'${aws_key_pair.key_intensivao.key_name}.pem'", "ec2-user@${module.ec2_multiple["one"].public_dns}"]),
+  join(" ", ["ssh -i", "../'${aws_key_pair.key_intensivao.key_name}.pem'", "ec2-user@${module.ec2_multiple["two"].public_dns}"])]
+}
+
