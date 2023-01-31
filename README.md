@@ -3,7 +3,7 @@
 ## Requisitos
 
 - Aws Cli instalado e configurado com um usuario que executa comandos: <br/>
-  [Instruções para instalação](hhttps://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-chap-getting-started.html) <br/>
+  [Instruções para instalação](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-chap-getting-started.html) <br/>
   [Instruções para configuração](https://docs.aws.amazon.com/pt_br/cli/latest/userguide/cli-chap-configure.html)
 - Terraform instalado: <br/>
   [Instruções para instalação](https://developer.hashicorp.com/terraform/downloads)
