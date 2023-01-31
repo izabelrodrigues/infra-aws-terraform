@@ -8,8 +8,8 @@ terraform {
 }
 
 provider "aws" {
-  shared_config_files      = ["seu_caminho_arquivo_config"]      #geralmente ~/users/<seu_user/aws/config
-  shared_credentials_files = ["seu_caminho_arquivo_credentials"] #geralmente ~/users/<seu_user/aws/credentials
+  shared_config_files      = ["seu_caminho_arquivo_config"]      #geralmente /users/<seu_user>/.aws/config
+  shared_credentials_files = ["seu_caminho_arquivo_credentials"] #geralmente /users/<seu_user>/.aws/credentials
   profile                  = "default"
   region                   = local.region
 }
