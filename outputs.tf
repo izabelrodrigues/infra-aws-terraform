@@ -14,3 +14,8 @@ output "commands_ssh_per_instance" {
   join(" ", ["ssh -i", "../'${aws_key_pair.key_intensivao.key_name}.pem'", "ec2-user@${module.ec2_multiple["two"].public_dns}"])]
 }
 
+output "alb_url" {
+  description = "endereço alb"
+  value       = module.alb.lb_dns_name
+}
+
