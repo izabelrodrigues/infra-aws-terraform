@@ -20,19 +20,21 @@ terraform apply
 
 ## Outputs
 
+- alb_url: Endereço do load balancer
 - commands_ssh_per_instance: Lista com comando para acessar um diretorio anterior ao do codigo e executar a conexao ssh com a instancia criada <br/>
 - instances_id: ids das instancias criadas <br/>
 - public_ips: public ips das instancias criadas <br/>
-![saida_outputs](https://user-images.githubusercontent.com/3687713/215537833-459d99f2-37de-43dd-89d4-954d124d26fd.jpg)
+![image](https://user-images.githubusercontent.com/3687713/216229841-c01cdb16-8cd7-404b-b634-d7fd56a413a1.png)
+
 
 ## Arquitetura criada após a execução
-![infra-terraform](https://user-images.githubusercontent.com/3687713/215537604-a9f84c44-6271-471e-af55-c3f7e770cd9c.png)
+![infra-terraform drawio](https://user-images.githubusercontent.com/3687713/216229607-35080849-542c-4731-9726-6b511e077a4e.png)
 
 ## Como acessar as máquinas via ssh
 
 - Copie a saida do output commands_ssh_per_instance que contem a instancia desejada e execute o comando via bash para conectar na instancia via ssh
 
-![exemplo-conexao](https://user-images.githubusercontent.com/3687713/215538016-d105c1b2-9c4f-4281-b9a6-6b0c1309795a.jpg)
+![image](https://user-images.githubusercontent.com/3687713/216229991-44e50d4e-4e93-4e5e-864a-eaa4a4fe6a0e.png)
 
-## Exemplo de uma das instâncias em execução
-![exemplo-ngix-uma-instancia](https://user-images.githubusercontent.com/3687713/215538363-cb461616-b4e0-401a-b9de-489f07a061a1.jpg)
+## Exemplo de acesso pelo Load Balancer
+![image](https://user-images.githubusercontent.com/3687713/216229701-2a242c46-e5a1-4d40-883a-620d5e1010ce.png)
