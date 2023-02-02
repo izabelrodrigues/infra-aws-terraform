@@ -1,4 +1,5 @@
 # Infraestrutura AWS com Terraform
+**atenção o código é uma demonstração. Não use a liberação de acesso para as portas usando all trafic em um ambiente produtivo.
 
 ## Requisitos
 
@@ -38,3 +39,7 @@ terraform apply
 
 ## Exemplo de acesso pelo Load Balancer
 ![image](https://user-images.githubusercontent.com/3687713/216229701-2a242c46-e5a1-4d40-883a-620d5e1010ce.png)
+
+## Documentação de referência
+- [Terraform](https://registry.terraform.io/)
+- [AWS Cli](https://docs.aws.amazon.com/pt_br/cli/index.html)
