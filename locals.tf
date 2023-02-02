@@ -56,14 +56,6 @@ locals {
         cidr_block  = "0.0.0.0/0"
       },
       {
-        rule_number = 130
-        rule_action = "allow"
-        from_port   = 3389
-        to_port     = 3389
-        protocol    = "tcp"
-        cidr_block  = "0.0.0.0/0"
-      },
-      {
         rule_number     = 140
         rule_action     = "allow"
         from_port       = 80
@@ -116,7 +108,7 @@ locals {
     ]
   }
 
-    multiple_instances = {
+  multiple_instances = {
     one = {
       availability_zone = element(module.vpc.azs, 0)
       subnet_id         = element(module.vpc.public_subnets, 0)
