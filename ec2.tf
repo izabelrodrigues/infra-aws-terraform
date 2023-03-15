@@ -17,14 +17,7 @@ module "ec2_multiple" {
   enable_volume_tags = false
   root_block_device  = lookup(each.value, "root_block_device", [])
 
-  user_data = <<EOF
-  #!/bin/bash
-  sudo yum update -y
-  sudo amazon-linux-extras install nginx1 -y
-  sudo systemctl enable nginx
-  sudo systemctl start nginx
-  echo "<h1> Nginx deployed with Terraform! </h1>" | sudo tee /usr/share/nginx/html/index.html
-  EOF
+  user_data = filebase64("user_data.sh")
 
   key_name = aws_key_pair.key_intensivao.key_name
 
