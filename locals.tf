@@ -63,6 +63,22 @@ locals {
         protocol        = "tcp"
         ipv6_cidr_block = "::/0"
       },
+      {
+        rule_number = 150
+        rule_action = "allow"
+        from_port   = 8080
+        to_port     = 8080
+        protocol    = "tcp"
+        cidr_block  = "0.0.0.0/0"
+      },
+      {
+        rule_number     = 160
+        rule_action     = "allow"
+        from_port       = 8080
+        to_port         = 8080
+        protocol        = "tcp"
+        ipv6_cidr_block = "::/0"
+      },
     ]
     public_outbound = [
       {
@@ -104,6 +120,14 @@ locals {
         to_port         = 90
         protocol        = "tcp"
         ipv6_cidr_block = "::/0"
+      },
+      {
+        rule_number = 160
+        rule_action = "allow"
+        from_port   = 8080
+        to_port     = 8080
+        protocol    = "tcp"
+        cidr_block  = "0.0.0.0/0"
       },
     ]
   }
