@@ -1,3 +1,8 @@
+data "aws_ssm_parameters_by_path" "tg" {
+  path = "/tg-id-alb"
+}
+
+
 output "instances_id" {
   description = "ids das instancias criadas"
   value       = [module.ec2_multiple["one"].id, module.ec2_multiple["two"].id]
@@ -17,5 +22,11 @@ output "commands_ssh_per_instance" {
 output "alb_url" {
   description = "endereço alb"
   value       = module.alb.lb_dns_name
+}
+
+output "parametro" {
+  description = "value"
+  value       = data.aws_ssm_parameters_by_path.tg.path
+  sensitive   = true
 }
 
